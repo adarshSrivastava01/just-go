@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var conferenceName string = "Go Conference"
+	// var conferenceName string = "Go Conference"
+	conferenceName := "Go Conference" // can't be done in case of constants
 	const conferenceTickets uint = 50
 	
 	fmt.Println("Welcome to", conferenceName, "booking application", conferenceTickets)
@@ -13,8 +14,7 @@ func main() {
 	var userName string
 	var userTickets int
 
-	userName = "Tom"
-	userTickets = 2
+	fmt.Scan(&userName) // fmt.Println(&name) -> returns the memory address
 
 	fmt.Printf("User %v has %v Tickets", userName, userTickets)
 
