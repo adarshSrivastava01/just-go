@@ -15,7 +15,9 @@ func main() {
 	// var bookings = [50]string{} // length of array -> 50, type of elements -> string, {} -> Initialised Values
 	// or could be replaced by
 	
-	var bookings [50]string
+	var bookings []string
+	// to create slice i.e. list we just remove the size from declaration -> var bookings []string
+	// to add element use sliceName = append(sliceName, value)
 
 	var firstName string
 	var lastName string
@@ -32,12 +34,13 @@ func main() {
 	fmt.Scan(&userTickets)
 
 	remainingTickets = remainingTickets - userTickets
-	bookings[0] = firstName + " " + lastName
+	// bookings[0] = firstName + " " + lastName
+	bookings = append(bookings, firstName + " " + lastName)
 
-	fmt.Printf("The Whole array: %v\n", bookings)
+	fmt.Printf("The Whole slice: %v\n", bookings)
 	fmt.Printf("The first value: %v\n", bookings[0])
-	fmt.Printf("Array Type: %T\n", bookings)
-	fmt.Printf("Array Length: %v\n", len(bookings))
+	fmt.Printf("Slice Type: %T\n", bookings)
+	fmt.Printf("Slice Length: %v\n", len(bookings))
 
 	// fmt.Printf("User %v has %v Tickets", firstName, userTickets)
 
