@@ -39,6 +39,11 @@ func main() {
 		fmt.Println("Enter the No of Tickets: ")
 		fmt.Scan(&userTickets)
 	
+		if userTickets > remainingTickets {
+			fmt.Println("Not much tickets")
+			continue
+		}
+
 		remainingTickets = remainingTickets - userTickets
 		// bookings[0] = firstName + " " + lastName
 		bookings = append(bookings, firstName + " " + lastName)
@@ -58,6 +63,7 @@ func main() {
 			var names = strings.Fields(booking)
 			firstNames = append(firstNames, names[0])
 		}
+
 		fmt.Printf("The First names of bookings are: %v\n", firstNames)
 
 		noTicketsRemaining := remainingTickets == 0
@@ -68,4 +74,12 @@ func main() {
 		}
 	}
 
+	// Syntax for if else
+	// if condtion {
+
+	// } else if condition {
+
+	// } else {
+
+	// }
 }
